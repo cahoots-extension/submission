@@ -1,0 +1,16 @@
+#!/usr/bin/env iojs
+
+/*
+ * cahoots-submission
+ *
+ * Copyright cahoots
+ * MIT Licensed
+ *
+ */
+
+/**
+ * @author André König <andre.koenig@posteo.de>
+ *
+ */
+
+'use strict';
