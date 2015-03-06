@@ -1,9 +1,8 @@
 {
-  "name": "cahoots-submission",
+  "name": "cahoots-submission-platform",
   "version": "1.0.0",
-  "description": "The submission platform.",
+  "description": "The abstraction from the submission / voting platform.",
   "main": "index.js",
-  "bin": "./bin/cahoots-submission",
   "scripts": {
     "test": "gulp",
     "lint": "gulp lint",
