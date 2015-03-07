@@ -2,6 +2,12 @@
 
 The cahoots.pw submission platform.
 
+## Environment variables
+
+PLATFORM_ENDPOINT
+PLATFORM_EMAIL
+PLATFORM_SECRET
+
 ## License
 
 The MIT License (MIT)
