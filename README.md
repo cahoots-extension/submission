@@ -7,6 +7,7 @@ The cahoots.pw submission platform.
 PLATFORM_ENDPOINT
 PLATFORM_EMAIL
 PLATFORM_SECRET
+PLATFORM_CATEGORY
 
 ## License
 
