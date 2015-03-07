@@ -1,0 +1,74 @@
+{
+  "name": "cahoots-submission-recaptcha",
+  "version": "1.0.0",
+  "description": "Module for abstracting from the Google reCAPTCHA communication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp",
+    "lint": "gulp lint",
+    "specs": "gulp specs",
+    "checkstyle": "gulp checkstyle"
+  },
+  "pre-commit": [
+    "lint",
+    "checkstyle",
+    "specs"
+  ],
+  "engine": {
+    "iojs": "^1.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getcahoots/submission.git"
+  },
+  "keywords": [
+    "cahoots.pw",
+    "submission"
+  ],
+  "author": "cahoots.pw",
+  "contributors": [
+    {
+      "name": "Alexander Barnickel",
+      "email": "alex@cahoots.ninja"
+    },
+    {
+      "name": "Jonas Bergmeier",
+      "email": "jonas@cahoots.ninja",
+      "url": "http://jonasbergmeier.net"
+    },
+    {
+      "name": "Oliver Sommer",
+      "email": "oliver@cahoots.ninja"
+    },
+    {
+      "name": "Julian Fath",
+      "email": "julian@cahoots.ninja"
+    },
+    {
+      "name": "André König",
+      "email": "andre@cahoots.ninja",
+      "url": "http://andrekoenig.info"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getcahoots/submission/issues"
+  },
+  "homepage": "https://github.com/getcahoots/submission",
+  "dependencies": {
+    "debug": "^2.1.2",
+    "mandatory": "^1.0.0",
+    "superagent": "^0.21.0",
+    "verror": "^1.6.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "gulp": "^3.8.11",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.1",
+    "pre-commit": "^1.0.5",
+    "run-sequence": "^1.0.2"
+  }
+}
