@@ -75,7 +75,7 @@ SubmissionsResource.prototype.insert = function insert (req, res) {
             return res.status(200).send(http.STATUS_CODES[500]);
         }
 
-        hipchat().notify('submission', 'New submission: ' + submission.title + ': ' + submission.url);
+        hipchat().notify('bot', 'New submission: ' + submission.title + ' - ' + submission.url);
 
         res.status(201).json({
             title: submission.title,
