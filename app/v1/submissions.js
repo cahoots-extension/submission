@@ -17,6 +17,7 @@ var http = require('http');
 
 var platform = require('cahoots-submission-platform');
 var recaptcha = require('cahoots-submission-recaptcha');
+var hipchat = require('cahoots-submission-hipchat');
 
 var debug = require('debug')('cahoots:submission:SubmissionsResource');
 
@@ -67,15 +68,18 @@ SubmissionsResource.prototype.insert = function insert (req, res) {
         self.$service.insert(submission, onInsert);
     }
 
-    function onInsert (err, url) {
+    function onInsert (err, submission) {
         if (err) {
             debug('Failed to post the submission on the platform: %s', err.toString());
 
             return res.status(200).send(http.STATUS_CODES[500]);
         }
 
+        hipchat().notify('submission', 'New submission: ' + submission.title + ': ' + submission.url);
+
         res.status(201).json({
-            url: url
+            title: submission.title,
+            url: submission.url
         });
     }
 
