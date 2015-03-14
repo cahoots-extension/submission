@@ -1,3 +1,30 @@
+# cahoots.pw - submission - reCAPTCHA
+
+Google reCAPTCHA API abstraction
+
+## Usage example
+
+```js
+var recaptcha = require('cahoots-submission-recaptcha');
+
+recaptcha().verify('80.228.118.81', '82bde700eda9524dc322197882828215fd39a507......', function onVerify (err)) {
+    // ...
+});
+
+```
+
+## Environment variable
+
+  * `RECAPTCHA_SECRET`: The Google reCAPTCHA API secret.
+
+## API
+
+#### verify(ipaddress, recaptchaResponse, callback);
+
+Verifies the given `recaptchaResponse` against the Google reCAPTCHA API.
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2014-2015 Cahoots, Germany <info@cahoots.pw>
