@@ -1,22 +1,30 @@
 # cahoots.pw - submission
 
-The cahoots.pw submission platform.
+The Cahoots submission platform which abstracts from our forum and provides a lean interface for inserting new submissions.
 
-## Environment variables
+## Running
 
-PLATFORM_ENDPOINT
-PLATFORM_EMAIL
-PLATFORM_SECRET
-PLATFORM_CATEGORY
-RECAPTCHA_SECRET
-HIPCHAT_TOKEN
-HIPCHAT_ROOM
+```sh
+npm start
+```
+
+### Environment variables
+
+Please note that you have to define some environment variables before executing `npm start`
+
+  * `PLATFORM_ENDPOINT`: The forum API endpoint.
+  * `PLATFORM_EMAIL`: The email address of the forum user.
+  * `PLATFORM_SECRET`: The forum API secret.
+  * `PLATFORM_CATEGORY`: The forum category into which the new submissions should be posted.
+  * `RECAPTCHA_SECRET`: The Google reCAPTCHA API secret.
+  * `HIPCHAT_TOKEN`: The HipChat notification token.
+  * `HIPCHAT_ROOM`: The HipChat room into which new submission notifications should be send.
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2015 cahoots.pw, Germany <info@cahoots.pw>
+Copyright (c) 2014-2015 Cahoots, Germany <info@cahoots.pw>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
