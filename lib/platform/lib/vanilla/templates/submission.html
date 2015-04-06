@@ -8,7 +8,7 @@
 <b class="Bold">Informationen zur Organisation</b>
 <a class="organization-info" href="<%= organizationInfo %>"><%= organizationInfo %></a>
 
-<% if (role) { %>
+<% if (typeof role !== 'undefined') { %>
     <b class="Bold">Rolle / Funktion</b>
 	<span class="role"><%= role %></span>
 <% } %>
