@@ -91,7 +91,7 @@ SubmissionsResource.prototype.insert = function insert (req, res) {
         !submission.cahootsSource ||
         !submission.recaptcha) {
 
-        debug('Someone sent an invalid response!');
+        debug('Someone sent an invalid request!');
 
         return res.status(400).send(http.STATUS_CODES[400]);
     }
