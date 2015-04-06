@@ -1,6 +1,6 @@
 {
   "name": "cahoots-submission",
-  "version": "1.0.0",
+  "version": "1.1.0-beta",
   "description": "The submission platform.",
   "main": "index.js",
   "bin": "./bin/cahoots-submission",
