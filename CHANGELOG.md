@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.1.0 (2015-04-06)
 
   * 7c92987 npm production install.
   * 287002d Support for the `role` and `authorInfo` attributes (#3).
