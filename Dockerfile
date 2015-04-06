@@ -10,6 +10,6 @@ ENV PORT 8080
 
 WORKDIR /home/cahoots
 USER cahoots
-RUN npm i
+RUN npm i --production
 
 CMD "./bin/cahoots-submission"
