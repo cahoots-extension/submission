@@ -1,5 +1,8 @@
 # UNRELEASED
 
+  * 7c92987 npm production install.
+  * 287002d Support for the `role` and `authorInfo` attributes (#3).
+
 # 1.0.0 (2015-03-14)
 
   * HipChat notification when a new submission arrived.
