@@ -85,7 +85,7 @@ SubmissionsResource.prototype.insert = function insert (req, res) {
 
     // TODO: Refactor use JSON schema
     if (!submission.authorName ||
-        !submission.authorInfo ||
+        //!submission.authorInfo ||
         !submission.organizationName ||
         !submission.organizationInfo ||
         !submission.cahootsSource ||
