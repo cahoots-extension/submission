@@ -15,7 +15,7 @@
     "specs"
   ],
   "engine": {
-    "iojs": "^1.3.0"
+    "iojs": "^1.6.0"
   },
   "repository": {
     "type": "git",
