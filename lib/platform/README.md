@@ -5,7 +5,7 @@ The platform abstraction. Abstracts from the current forum software.
 ## Usage example
 
 ```js
-var platform = require('cahoots-submission-platform');
+var platform = require('cahoots-submission-platform')();
 
 var submission = platform('submission');
 ```
@@ -19,6 +19,14 @@ var submission = platform('submission');
 
 ## API
 
+### Factory
+
+The factory for creating the platform object consumes an optional adapter type parameter. We support only one adapter (`vanilla`) at the moment. It would be possible to define the adapter type explicitly when we switch the forum software someday.
+
+```js
+var platform = require('cahoots-submission-platform')('vanilla');
+```
+
 ### Submission
 
 #### insert(submission, callback);
@@ -26,27 +34,27 @@ var submission = platform('submission');
 Sends a new submission to the forum.
 
 ```js
-var platform = require('cahoots-submission-platform');
+var platform = require('cahoots-submission-platform')();
 
 var submission = platform('submission');
 
 var data = {
     authorName: 'Peter Frey',
+    authorInfo: 'https://de.wikipedia.org/wiki/Peter_Frey',
     organizationName: 'Centrum für angewandte Politikforschung',
     organizationInfo: 'http://de.wikipedia.org/wiki/Centrum_f%C3%BCr_angewandte_Politikforschung',
-    cahootsSource: 'http://www.cap-lmu.de/cap/fellows/'
+    cahootsSource: 'http://www.cap-lmu.de/cap/fellows/',
+    role: 'Mitglied' // optional
 };
 
-function onInsert (err, data) {
+function onInsert (err, template) {
     if (err) {
         return console.error(err);
     }
 
-    console.log(data.authorName);
-    console.log(data.organizationName);
-    console.log(data.organizationInfo);
-    console.log(data.cahootsSource);
-    console.log(data.url); // => e.g. https://forum.cahoots.pw/discussion/697/peter-frey-centrum-fuer-angewandte-politikforschung
+    console.log(template.title);
+    console.log(template.body); // Rendered html template
+    console.log(template.url); // => e.g. https://forum.cahoots.pw/discussion/697/peter-frey-centrum-fuer-angewandte-politikforschung
 }
 
 submission.insert(data, onInsert);
